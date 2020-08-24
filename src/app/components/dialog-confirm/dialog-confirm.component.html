@@ -1,0 +1,17 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+    <h2 style="width: 100%; margin:0" fxFlex>Delete Investiment</h2>
+</div>
+<mat-dialog-content class="mat-typography">
+    Do you really want to delete the following data:
+    <br> ID: {{data.id}}
+    <br> Transaction Type: {{data.transaction_type}}
+    <br> Date: {{data.date | date:'M/dd/yyyy hh:mm'}}
+    <br> Value: {{data.value}}
+</mat-dialog-content>
+<mat-dialog-actions >
+    <div style="width: 100%;" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
+        <button mat-raised-button class="button" mat-dialog-close>No</button>
+        <button mat-raised-button class="button" color="warn" [mat-dialog-close]="true">Yes</button>
+    </div>
+  
+</mat-dialog-actions>

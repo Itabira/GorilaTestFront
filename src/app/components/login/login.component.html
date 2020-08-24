@@ -1,0 +1,25 @@
+<app-main_bar ></app-main_bar>
+<div style="width: 100%; height: 90%;"  fxLayoutAlign="center center" fxLayout="column">
+    <mat-card class="login mat-elevation-z8">
+        <mat-card-header fxLayout="column">
+          <span class="title" style="width: 100%;" fxLayoutAlign="center center" fxLayout="row" fxFlex>LOGIN</span>
+        </mat-card-header>
+        <mat-card-content fxLayout="column">
+            <form class="example-form">
+                <mat-form-field appearance="outline" class="textBox">
+                  <mat-label>User</mat-label>
+                  <input matInput [(ngModel)]="email" name="email">
+                </mat-form-field>
+              
+                <mat-form-field appearance="outline" class="textBox">
+                  <mat-label>Password</mat-label>
+                  <input matInput type="password" [(ngModel)]="password" name="password">
+                </mat-form-field>
+              </form>
+        </mat-card-content>
+        <mat-card-actions>
+        <button class="botao" mat-raised-button color="primary" (click)="login()">Login</button>
+        </mat-card-actions>
+    </mat-card>
+
+</div>

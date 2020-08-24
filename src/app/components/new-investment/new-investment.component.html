@@ -1,0 +1,32 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+    <h2 style="width: 100%; margin:0" fxFlex>New Investiment</h2>
+    <button mat-icon-button mat-dialog-close>
+        <mat-icon> close</mat-icon>
+    </button>
+</div>
+<mat-dialog-content class="mat-typography">
+    <mat-form-field class="form" appearance="outline">
+        <mat-label>Transaction Type</mat-label>
+        <mat-select [value]="transaction_type" [(ngModel)]="transaction_type" (selectionChange)="checkData()" required>
+          <mat-option value="Fixed Income">Fixed Income</mat-option>
+          <mat-option value="Variable Income">Variable Income</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form">
+        <mat-label>Value</mat-label>
+        <input matInput type="number" [(ngModel)]="value" (keyup)="checkData()" required>
+      </mat-form-field>
+      <mat-form-field class="form" color="primary" appearance="outline">
+        <mat-label>Insert the date of the transaction</mat-label>
+        <input matInput [matDatepicker]="picker1" disabled [(ngModel)]="date" (dateChange)="checkData()" required>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+      </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions >
+    <div style="width: 100%;" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
+        <button mat-raised-button class="button">Clear</button>
+        <button mat-raised-button class="button" color="primary" [disabled]="checkButton" (click)="saveInvestment()">Save</button>
+    </div>
+  
+</mat-dialog-actions>

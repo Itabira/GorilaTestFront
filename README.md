@@ -14,6 +14,8 @@ De acordo com o roteiro, a aplicação foi codificada utilizando os seguintes co
   * Front-end: Angular;
   * Hospedagem: Heroku;
   * Autenticação: Firebase.
+
+[Aqui](https://drive.google.com/file/d/1GGhDzaH4PmfZySsmP6QyAC3Z2yVP4jLx/view?usp=sharing) é a prototipagem inicial do projeto.
   
 
 Agradeço pela oportunidade de fazer esse desafio. Aprendi muito durante todo o processo.

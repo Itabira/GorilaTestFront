@@ -28,6 +28,7 @@ export interface Investments{
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
+
 export class MainPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private chart: am4charts.PieChart;
@@ -123,22 +124,17 @@ export class MainPageComponent implements OnInit, AfterViewInit, OnDestroy {
         "value": fixIncome
       }];
 
-      // Add and configure Series
       var pieSeries = chart.series.push(new am4charts.PieSeries());
       pieSeries.dataFields.value = "value";
       pieSeries.dataFields.category = "transaction_type";
 
-      // Let's cut a hole in our Pie chart the size of 40% the radius
       chart.innerRadius = am4core.percent(40);
 
-      // Disable ticks and labels
       pieSeries.labels.template.disabled = true;
       pieSeries.ticks.template.disabled = true;
 
-      // Disable tooltips
       pieSeries.slices.template.tooltipText = "";
 
-      // Add a legend
       chart.legend = new am4charts.Legend();
       
 
